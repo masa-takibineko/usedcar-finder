@@ -1,0 +1,19 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+export default function Header({ rightBadge }: { rightBadge?: React.ReactNode }) {
+  return (
+    <header className="site-header">
+      <div className="container" style={{ gap: 10 }}>
+        <div className="logo">中古車オークション直販代行サイト</div>
+        <nav style={{ display: "flex", gap: 14, alignItems: "center", marginLeft: "auto" }}>
+          <Link to="/company" style={{ color: "#93c5fd", textDecoration: "none" }}>会社概要</Link>
+          <Link to="/privacy" style={{ color: "#93c5fd", textDecoration: "none" }}>プライバシーポリシー</Link>
+          <Link to="/price" style={{ color: "#93c5fd", textDecoration: "none" }}>手数料</Link> {/* ★ 追加（任意） */}
+          {rightBadge ? <div className="badge">{rightBadge}</div> : null}
+        </nav>
+
+      </div>
+    </header>
+  );
+}
