@@ -12,30 +12,6 @@ export default function Price() {
         <Link to="/risks" className="prose-link">こちら</Link> をご覧ください。
       </p>
 
-      <div style={{
-        marginTop: 18, border: "1px solid rgba(255,255,255,.12)",
-        borderRadius: 12, overflow: "hidden"
-      }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-          <thead>
-            <tr>
-              <th style={{ textAlign: "left", padding: "12px 10px", background: "rgba(148,163,184,.16)" }}>区分</th>
-              <th style={{ textAlign: "right", padding: "12px 10px", background: "rgba(148,163,184,.16)" }}>金額</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={{ padding: "12px 10px", borderTop: "1px solid rgba(255,255,255,.08)" }}>
-                落札代行手数料（基本）
-              </td>
-              <td style={{ padding: "12px 10px", textAlign: "right", borderTop: "1px solid rgba(255,255,255,.08)" }}>
-                35,800円（税込 39,800円）
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
       <h2 style={{ marginTop: 24 }}>落札価格別参考手数料一覧</h2>
       <div style={{
         marginTop: 10, border: "1px solid rgba(255,255,255,.12)",

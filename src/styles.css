@@ -1,7 +1,7 @@
 :root {
-    --bg-grad: radial-gradient(1200px 800px at 10% -10%, #a1c4fd44 0%, transparent 60%),
-               radial-gradient(900px 700px at 110% 10%, #c2e9fb55 0%, transparent 60%),
-               linear-gradient(180deg, #0f172a, #0b1220 60%, #0b1220);
+    --bg-grad: linear-gradient(180deg, #0a1220 0%, #0b0f1c 45%, #080c16 100%);
+    --bg-glow-1: radial-gradient(1200px 800px at 12% 4%, rgba(95, 151, 255, 0.32) 0%, transparent 60%);
+    --bg-glow-2: radial-gradient(900px 700px at 88% 2%, rgba(49, 185, 255, 0.28) 0%, transparent 60%);
     --card-bg: rgba(255, 255, 255, 0.08);
     --card-bd: rgba(255, 255, 255, 0.25);
     --txt: #e6edf3;
@@ -14,8 +14,21 @@
   body {
     margin: 0;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: var(--bg-grad);
+    background: #080c16;
     color: var(--txt);
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: var(--bg-grad), var(--bg-glow-1), var(--bg-glow-2);
+    background-repeat: no-repeat;
+    background-size: cover, 100% 100%, 100% 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.95;
   }
   
   /* Header */
@@ -40,6 +53,7 @@
   /* Hero */
   .hero {
     max-width: 1100px; margin: 38px auto 20px; padding: 0 20px;
+    position: relative;
   }
   .hero h1 {
     font-size: clamp(24px, 4vw, 40px);
@@ -54,6 +68,8 @@
     border-radius: 18px;
     padding: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+    width: 100%;
+    overflow: hidden;
   }
   
   /* Search grid */
@@ -74,12 +90,15 @@
     background: rgba(255,255,255,.06);
     color: var(--txt);
     outline: none;
+    min-width: 0;
   }
+  .search-grid > *, .row > *, .row button.card { min-width: 0; }
   .input::placeholder { color: #94a3b8; }
   .select:has(option:disabled[selected]) { color: #94a3b8; }
   
   .row { display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 960px) { .row { grid-template-columns: 1fr; } }
+  .row button.card { width: 100%; justify-content: center; display: inline-flex; }
   
   .kpis {
     display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
@@ -94,6 +113,7 @@
   
   .results {
     max-width: 1100px; margin: 18px auto 60px; padding: 0 20px;
+    position: relative;
   }
   .item {
     display: grid; gap: 6px;
@@ -146,6 +166,8 @@
   @media (max-width: 560px) {
     .card { padding: 14px; }
     .row { gap: 8px; }
+    .hero { margin: 24px auto 12px; padding-bottom: 110px; }
+    .results { padding-bottom: 110px; }
   }
 
   /* 結果テーブル：モバイルは横スクロール */
@@ -236,47 +258,42 @@
 .prose li { margin: 4px 0; color: #cbd5e1; }
 .prose a  { color: #93c5fd; text-decoration: underline; }
 
-/* ▼ 固定表示の公式LINE追加ボタン */
-.line-banner {
-  display: inline-block;
-  position: static;
-  margin-top: 16px;
-  background-color: #06c755;
-  color: white;
-  font-weight: 800;
-  font-size: 20px;
-  padding: 18px 36px;
-  border-radius: 9999px;
-  text-decoration: none;
-}
-.best-fee-banner {
-  text-align: center;
-  background: linear-gradient(90deg, #ff4800, #ff4800);
-  color: #fff;
-  font-size: 22px;
-  font-weight: 800;
-  padding: 16px;
+  /* ▼ 固定表示の公式LINE追加ボタン */
+  .line-banner {
+    display: block;
+    position: sticky;
+    top: 76px;
+    z-index: 20;
+    margin: 16px 0;
+    background: linear-gradient(90deg, #06c755, #05a84a);
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 18px 28px;
+    border-radius: 16px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+  @media (max-width: 960px) {
+    .line-banner {
+      position: static;
+      font-size: 18px;
+      padding: 16px 20px;
+      border-radius: 14px;
+    }
+  }
+  .best-fee-banner {
+    text-align: center;
+    background: linear-gradient(90deg, #ff7a1a 0%, #ff4800 50%, #ff2f8d 100%);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    padding: 16px;
   border-radius: 12px;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 @media (max-width: 640px) {
   .best-fee-banner { font-size: 18px; padding: 12px; }
-}
-
-
-
-/* モバイルでは下固定に切り替え */
-@media (max-width: 640px) {
-  .line-banner {
-    position: fixed;
-    bottom: 16px;
-    top: auto;
-    right: 50%;
-    transform: translateX(50%);
-    width: calc(100% - 32px);
-    font-size: 16px;
-    padding: 14px 0;
-    border-radius: 12px;
-  }
 }
