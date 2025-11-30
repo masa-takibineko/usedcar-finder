@@ -41,21 +41,37 @@ const YEARS = Array.from({ length: 2025 - 1985 + 1 }, (_, i) => 1985 + i);
 
 export default function App() {
   const [all, setAll] = useState<Listing[]>([]);
+  const [makerFallback, setMakerFallback] = useState<string[]>([]);
   const [draft, setDraft] = useState<Filters>({ transmission: "ALL", shaken: "all", equip: {} });
   const [applied, setApplied] = useState<Filters>({ transmission: "ALL", shaken: "all", equip: {} });
 
-  useEffect(() => { loadAllFromManifest("data/manifest.json").then(setAll); }, []);
+  useEffect(() => {
+    let active = true;
+
+    loadAllFromManifest("data/manifest.json", files => {
+      if (!active) return;
+      const makers = files
+        .map(f => f.replace(/_fixed\.csv$/i, "").replace(/\.csv$/i, ""))
+        .filter(Boolean);
+      setMakerFallback([...new Set(makers)].sort());
+    })
+      .then(rows => { if (active) setAll(rows); })
+      .catch(err => console.error("データの読み込みに失敗しました", err));
+
+    return () => { active = false; };
+  }, []);
   
 
   // プルダウン候補（ドラフトに連動）
   const makers = useMemo(() => {
     const rows = all.filter(r =>
       (!draft.model  || r.model === draft.model) &&
-        (!draft.grade  || r.grade === draft.grade) &&
-        (!draft.trim   || r.trim  === draft.trim)
+      (!draft.grade  || r.grade === draft.grade) &&
+      (!draft.trim   || r.trim  === draft.trim)
       );
-    return [...new Set(rows.map(r => r.maker))].sort();
-  }, [all, draft.model, draft.grade, draft.trim]);
+    const fromData = [...new Set(rows.map(r => r.maker))].sort();
+    return fromData.length ? fromData : makerFallback;
+  }, [all, draft.model, draft.grade, draft.trim, makerFallback]);
   
   const models = useMemo(() => {
     const rows = all.filter(r =>
@@ -139,7 +155,7 @@ export default function App() {
 
       <section className="hero">
         <div className="best-fee-banner">
-          <strong>代行手数料 業界最安値 35,800円（税込）</strong>
+          <strong>代行手数料 業界最安値級 35,800円（税抜）〜</strong>
         </div>
         <div className="notice">
           <h2>「オークション直販」で、中古車購入の常識を変える。</h2>

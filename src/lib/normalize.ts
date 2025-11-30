@@ -86,17 +86,19 @@ export async function loadAndNormalize(csvPath: string): Promise<Listing[]> {
   }).filter(r => r.maker && r.model && !Number.isNaN(r.price_man_yen));
 }
 // src/lib/normalize.ts の末尾あたりに追記
-export async function loadAllFromManifest(manifestPath: string): Promise<Listing[]> {
+export async function loadAllFromManifest(
+  manifestPath: string,
+  onManifestLoaded?: (files: string[]) => void,
+): Promise<Listing[]> {
   // BASE_URL を考慮して manifest をロード
   const manifestUrl = resolveAssetUrl(manifestPath);
   const res = await fetch(manifestUrl);
   const files: string[] = await res.json(); // ["abaruto_fixed.csv", "maker_xxx.csv", ...]
-  const all: Listing[] = [];
 
-  // 各CSVを順次ロード & 連結（同時でもOKだが順次が簡単）
-  for (const fname of files) {
-    const one = await loadAndNormalize(`data/${fname}`);
-    all.push(...one);
-  }
-  return all;
+  // プルダウン候補用に manifest の読み込み完了を通知
+  onManifestLoaded?.(files);
+
+  // 同時ロードで初期化時間を短縮
+  const all = await Promise.all(files.map(fname => loadAndNormalize(`data/${fname}`)));
+  return all.flat();
 }

@@ -46,7 +46,7 @@ export default function Example() {
               ["整備費用", "本人による"],
               ["納車手数料", "本人による"],
               ["落札手数料", "11,000円"],
-              ["オークション代行料", "55,000円"],
+              ["オークション代行料（税込）", "49,800円"],
             ].map(([label, value], i) => (
               <tr key={i}>
                 <td
@@ -89,7 +89,7 @@ export default function Example() {
                   borderTop: "2px solid rgba(255,255,255,.4)"
                 }}
               >
-                1,826,000円
+                1,820,800円
               </td>
             </tr>
           </tbody>
