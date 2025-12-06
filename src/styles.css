@@ -297,3 +297,18 @@
 @media (max-width: 640px) {
   .best-fee-banner { font-size: 18px; padding: 12px; }
 }
+/* 背景画像（ぼかさないフルスクリーン） */
+.site-bg {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 重い場合は削除OK */
+}
+
+/* コンテンツ側の薄い黒オーバーレイ（文字を見やすくする） */
+.site-bg-overlay {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55); /* もっと明るくしたければ 0.3 とかに */
+}
+

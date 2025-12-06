@@ -4,6 +4,8 @@ import "./styles.css";
 import Header from "./components/Header";
 import FloatingLine from "./components/FloatingLine";
 import { Link } from "react-router-dom";
+import heroCar from "./assets/hero-car.jpg";
+
 
 type Filters = {
   maker?: string; model?: string; grade?: string; trim?: string;
@@ -148,8 +150,12 @@ export default function App() {
     setDraft(prev => ({ ...prev, ...next }));
   };
 
-  return (
-    <>
+return (
+  <div
+    className="site-bg"
+    style={{ backgroundImage: `url(${heroCar})` }}
+  >
+    <div className="site-bg-overlay">
       {/* 上部ナビ（会社概要・プライバシー + 件数バッジ） */}
       <Header rightBadge={<>CSV: {all.length}件</>} />
 
@@ -381,6 +387,7 @@ export default function App() {
       </section>
       {/*右下に常時表示される LINE 公式ボタン */}
       <FloatingLine />
-    </>
+    </div>
+  </div>
   );
 }
