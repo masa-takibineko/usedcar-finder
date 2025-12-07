@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://masa-takibineko.github.io/usedcar-finder/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -39,5 +38,5 @@
   "overrides": {
     "vite": "npm:rolldown-vite@7.1.14"
   },
-  "homepage": "https://<masa-takibineko>.github.io/usedcar-finder"
+  "homepage": "https://masa-takibineko.github.io/usedcar-finder"
 }
