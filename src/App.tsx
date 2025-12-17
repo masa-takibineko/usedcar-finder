@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import FloatingLine from "./components/FloatingLine";
 import { Link } from "react-router-dom";
 import heroCar from "./assets/hero-car.jpg";
+import topCar from "./assets/top-car.jpg";
+import Seo from "./components/Seo";
 
 
 type Filters = {
@@ -155,6 +157,11 @@ return (
     className="site-bg"
     style={{ backgroundImage: `url(${heroCar})` }}
   >
+    <Seo
+      title="中古車購入を安くするならオークション代行検索MOQ商会へ"
+      description="中古車購入を安く抑えたい方のためのオークション代行検索。業界最安級の代行手数料35,800円〜で、中古車を適正価格で手に入れるための相場データと出品票を提供します。"
+      path="/"
+    />
     <div className="site-bg-overlay">
       {/* 上部ナビ（会社概要・プライバシー + 件数バッジ） */}
       <Header rightBadge={<>CSV: {all.length}件</>} />
@@ -163,6 +170,16 @@ return (
         <div className="best-fee-banner">
           <strong>代行手数料 業界最安値級 35,800円（税抜）〜</strong>
         </div>
+        <h1>中古車購入を安く抑える「オークション直販」検索</h1>
+        <p className="hero-lede">
+          「中古車購入を安く、でも状態には妥協したくない」方のための業者オークション検索。
+          出品票ベースの相場データから、欲しい車種を透明な価格で探せます。
+        </p>
+        <div className="seo-bullets">
+          <span>中古車購入を安くする代行手数料 35,800円〜</span>
+          <span>全国の業者オークション相場を横断チェック</span>
+          <span>LINEで無料相談・非公開在庫も提案</span>
+        </div>
         <div className="notice">
           <h2>「オークション直販」で、中古車購入の常識を変える。</h2>
           <p>
@@ -170,6 +187,17 @@ return (
             <strong>適正価格</strong>で理想の車を手に入れましょう。
           </p>
         </div>
+
+        {/* モバイルのみで表示するヒーロー画像 */}
+        <img
+          src={topCar}
+          alt="オークション会場に並ぶ車両"
+          className="mobile-hero-image"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
+
         {/* ▼ 公式LINEボタン（固定配置） */}
         <a
           href="https://lin.ee/xxxxx"  // ← あなたのLINE公式URLに置き換え
@@ -179,11 +207,14 @@ return (
         >
           💬 「LINEでお問い合わせ」
         </a>
+        <p style={{marginTop:20}}>
+              
+        </p>
 
         {/* ▼ 使い方ガイド */}
         <div className="prose">
-          <h3>ご利用の流れ</h3>
-          <p style={{marginTop: 8}}>
+          <h2>ご利用の流れ</h2>
+          <p style={{marginTop:20}}>
             オークション代行の注意点については  
             <Link to="/risks" className="prose-link">こちら</Link> をご確認ください。
           </p>
@@ -217,7 +248,6 @@ return (
         </div>
 
         {/* 既存の見出し＆説明（そのままでOK） */}
-        <h1> </h1>
         <p>条件を選んで「検索」を押すと、該当の行データを全て表示します。</p>
         {/* …以下、あなたの既存の検索カードUI */}
 

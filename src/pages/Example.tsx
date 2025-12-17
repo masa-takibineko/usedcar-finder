@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import Seo from "../components/Seo";
 
 export default function Example() {
   return (
     <main style={{ maxWidth: 600, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
+      <Seo
+        title="料金の参考例 | MOQ商会"
+        description="中古車オークション代行で実際にかかる料金のイメージ（参考例）を紹介します。"
+        path="/example"
+      />
       <h1 style={{ marginBottom: 8 }}>実際にかかる料金の例</h1>
       <p style={{ marginTop: 0, color: "#cbd5e1" }}>
         以下はオークション明細をもとにした参考例です。

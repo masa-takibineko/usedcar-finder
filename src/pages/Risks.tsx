@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import Seo from "../components/Seo";
 
 export default function Risks() {
   return (
     <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
+      <Seo
+        title="デメリットと注意点 | MOQ商会"
+        description="中古車オークション代行を利用する前に知っておきたいデメリット・注意点をまとめます。"
+        path="/risks"
+      />
       <h1 style={{ marginBottom: 8 }}>オークション代行のデメリットと注意点</h1>
       <p style={{ color: "#cbd5e1" }}>
         オークション代行は中間マージンを削減できる一方で、一般的な中古車販売とは異なる特徴があります。
@@ -21,7 +27,7 @@ export default function Risks() {
 
       {/* --- 2 --- */}
       <section style={{ marginTop: 28 }}>
-        <h2 style={{ marginBottom: 6 }}>2. 落札後の対応はすべてユーザー様ご自身で行います</h2>
+        <h2 style={{ marginBottom: 6 }}>2. 落札後の車両の不具合は基本的にはユーザー様負担となります。</h2>
         <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
           オートオークションは業者間取引のため、会場が認めるクレーム以外は基本的に
           「ノークレーム・現状販売」となります。

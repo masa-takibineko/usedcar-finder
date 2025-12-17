@@ -60,6 +60,23 @@
     line-height: 1.1; margin: 0 0 10px;
   }
   .hero p { color: var(--muted); margin: 0 0 20px; }
+  .hero-lede { font-size: 16px; max-width: 820px; }
+  .seo-bullets {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin: 8px 0 16px;
+  }
+  .seo-bullets span {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+  @media (max-width: 560px) {
+    .hero-lede { font-size: 15px; }
+    .seo-bullets { gap: 6px; }
+  }
   
   /* Glass card */
   .card {
@@ -253,6 +270,17 @@
 .notice h2 { margin: 0 0 6px; color: #f8fafc; }
 .notice p  { margin: 0; color: #e2e8f0; }
 
+.mobile-hero-image { display: none; }
+@media (max-width: 960px) {
+  .mobile-hero-image {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    margin: 0 0 14px;
+  }
+}
+
 .prose h3 { margin: 14px 0 8px; color: #e2e8f0; }
 .prose ol { margin: 0 0 8px 20px; }
 .prose li { margin: 4px 0; color: #cbd5e1; }
@@ -303,7 +331,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* 重い場合は削除OK */
+  background-attachment: scroll; /* モバイルで消えないよう常にscrollに */
+}
+@media (max-width: 768px) {
+  /* iOS Safari などで fixed が効かず画像が消えるためモバイルは scroll に */
+  .site-bg {
+    min-height: 100vh;
+  }
+  .site-bg-overlay {
+    min-height: 100vh;
+  }
 }
 
 /* コンテンツ側の薄い黒オーバーレイ（文字を見やすくする） */
@@ -311,4 +348,3 @@
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.55); /* もっと明るくしたければ 0.3 とかに */
 }
-

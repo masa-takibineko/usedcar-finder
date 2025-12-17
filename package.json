@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-seo.mjs",
     "build": "tsc -b && vite build",
     "postbuild": "cp dist/index.html dist/404.html",
     "lint": "eslint .",
