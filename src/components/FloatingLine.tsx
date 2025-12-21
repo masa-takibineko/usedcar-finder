@@ -1,7 +1,7 @@
 export default function FloatingLine() {
   return (
     <a
-      href="https://lin.ee/xxxxxx"   // ← 公式LINE URLに差し替え
+      href="https://lin.ee/l6P8Wvx"   // ← 公式LINE URLに差し替え
       target="_blank"
       rel="noopener noreferrer"
       className="floating-line"

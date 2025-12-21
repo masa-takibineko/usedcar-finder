@@ -1,23 +1,17 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import auction from "../assets/auction.jpg";
 import auctionMobile from "../assets/auction-mobile.jpg";
-import Seo from "../components/Seo";
 
 export default function Price() {
   return (
     <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
-      <Seo
-        title="オークション代行手数料 | MOQ商会"
-        description="MOQ商会のオークション代行手数料の目安と、落札価格別の参考手数料一覧を掲載しています。"
-        path="/price"
-      />
       <h1 style={{ marginBottom: 8 }}>オークション代行手数料</h1>
       <p style={{ marginTop: 0, color: "#cbd5e1" }}>
         一般的な中古車販売店のような中間マージンは一切ありません。市場価格に沿った透明な料金でご提供します。
       </p>
       <p style={{ marginTop: 16 }}>
         ※ オークション代行のリスクについては  
-        <Link to="/risks" className="prose-link">こちら</Link> をご覧ください。
+        <Link href="/risks" className="prose-link">こちら</Link> をご覧ください。
       </p>
 
       <div
@@ -29,9 +23,9 @@ export default function Price() {
         }}
       >
         <picture>
-          <source media="(max-width: 640px)" srcSet={auctionMobile} />
+          <source media="(max-width: 640px)" srcSet={auctionMobile.src} />
           <img
-            src={auction}
+            src={auction.src}
             alt="オークション会場での代行の様子"
             style={{ display: "block", width: "100%", height: "auto" }}
             loading="lazy"
@@ -91,7 +85,7 @@ export default function Price() {
       </p>
 
       <p style={{ marginTop: 18 }}>
-        <Link to="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
+        <Link href="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
           ← 検索ページに戻る
         </Link>
       </p>

@@ -1,21 +1,15 @@
-import { Link } from "react-router-dom";
-import Seo from "../components/Seo";
+import Link from "next/link";
 
 export default function Example() {
   return (
     <main style={{ maxWidth: 600, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
-      <Seo
-        title="料金の参考例 | MOQ商会"
-        description="中古車オークション代行で実際にかかる料金のイメージ（参考例）を紹介します。"
-        path="/example"
-      />
       <h1 style={{ marginBottom: 8 }}>実際にかかる料金の例</h1>
       <p style={{ marginTop: 0, color: "#cbd5e1" }}>
         以下はオークション明細をもとにした参考例です。
       </p>
       <p style={{ marginTop: 16 }}>
         注意点・デメリットの詳細は  
-        <Link to="/risks" className="prose-link">こちら</Link>
+        <Link href="/risks" className="prose-link">こちら</Link>
       </p>
 
 
@@ -112,7 +106,7 @@ export default function Example() {
       </p>
 
       <p style={{ marginTop: 18 }}>
-        <Link to="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
+        <Link href="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
           ← トップページに戻る
         </Link>
       </p>

@@ -1,13 +1,6 @@
-import Seo from "../components/Seo";
-
 export default function Privacy() {
   return (
     <main style={{ maxWidth: "800px", margin: "60px auto", color: "#e2e8f0", lineHeight: 1.6 }}>
-      <Seo
-        title="プライバシーポリシー | MOQ商会"
-        description="MOQ商会のプライバシーポリシー。個人情報の利用目的、第三者提供、安全管理、お問い合わせ窓口について記載します。"
-        path="/privacy"
-      />
       <h1>プライバシーポリシー</h1>
       <p>
         MOQ商会以下「当社」といいます）は、個人情報の保護を重要な責務と認識し、

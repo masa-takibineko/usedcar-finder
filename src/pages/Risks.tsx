@@ -1,14 +1,8 @@
-import { Link } from "react-router-dom";
-import Seo from "../components/Seo";
+import Link from "next/link";
 
 export default function Risks() {
   return (
     <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
-      <Seo
-        title="デメリットと注意点 | MOQ商会"
-        description="中古車オークション代行を利用する前に知っておきたいデメリット・注意点をまとめます。"
-        path="/risks"
-      />
       <h1 style={{ marginBottom: 8 }}>オークション代行のデメリットと注意点</h1>
       <p style={{ color: "#cbd5e1" }}>
         オークション代行は中間マージンを削減できる一方で、一般的な中古車販売とは異なる特徴があります。
@@ -52,7 +46,7 @@ export default function Risks() {
       </p>
 
       <p style={{ marginTop: 24 }}>
-        <Link to="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
+        <Link href="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
           ← トップページに戻る
         </Link>
       </p>

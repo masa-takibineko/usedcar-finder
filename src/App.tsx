@@ -1,12 +1,12 @@
+'use client';
+
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { loadAllFromManifest, type Listing } from "./lib/normalize";
-import "./styles.css";
 import Header from "./components/Header";
 import FloatingLine from "./components/FloatingLine";
-import { Link } from "react-router-dom";
 import heroCar from "./assets/hero-car.jpg";
 import topCar from "./assets/top-car.jpg";
-import Seo from "./components/Seo";
 
 
 type Filters = {
@@ -152,16 +152,11 @@ export default function App() {
     setDraft(prev => ({ ...prev, ...next }));
   };
 
-return (
-  <div
-    className="site-bg"
-    style={{ backgroundImage: `url(${heroCar})` }}
-  >
-    <Seo
-      title="中古車購入を安くするならオークション代行検索MOQ商会へ"
-      description="中古車購入を安く抑えたい方のためのオークション代行検索。業界最安級の代行手数料35,800円〜で、中古車を適正価格で手に入れるための相場データと出品票を提供します。"
-      path="/"
-    />
+  return (
+    <div
+      className="site-bg"
+      style={{ backgroundImage: `url(${heroCar.src})` }}
+    >
     <div className="site-bg-overlay">
       {/* 上部ナビ（会社概要・プライバシー + 件数バッジ） */}
       <Header rightBadge={<>CSV: {all.length}件</>} />
@@ -190,7 +185,7 @@ return (
 
         {/* モバイルのみで表示するヒーロー画像 */}
         <img
-          src={topCar}
+          src={topCar.src}
           alt="オークション会場に並ぶ車両"
           className="mobile-hero-image"
           loading="eager"
@@ -200,7 +195,7 @@ return (
 
         {/* ▼ 公式LINEボタン（固定配置） */}
         <a
-          href="https://lin.ee/xxxxx"  // ← あなたのLINE公式URLに置き換え
+          href="https://lin.ee/l6P8Wvx"  // ← あなたのLINE公式URLに置き換え
           target="_blank"
           rel="noopener noreferrer"
           className="line-banner"
@@ -216,7 +211,7 @@ return (
           <h2>ご利用の流れ</h2>
           <p style={{marginTop:20}}>
             オークション代行の注意点については  
-            <Link to="/risks" className="prose-link">こちら</Link> をご確認ください。
+            <Link href="/risks" className="prose-link">こちら</Link> をご確認ください。
           </p>
           <ol>
             <li>
@@ -239,10 +234,10 @@ return (
           {/* 手数料ページへのリンク（別ページ） */}
           <p style={{ marginTop: 8 }}>
             料金の目安は{" "}
-            <Link to="/price" className="prose-link">オークション代行手数料</Link>{" "}
+            <Link href="/price" className="prose-link">オークション代行手数料</Link>{" "}
             をご覧ください。<br />
             実際にかかる費用の例は{" "}
-            <Link to="/example" className="prose-link">こちら</Link>。
+            <Link href="/example" className="prose-link">こちら</Link>。
           </p>
 
         </div>

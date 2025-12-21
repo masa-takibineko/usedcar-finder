@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /data/
 
-Sitemap: https://masa-takibineko.github.io/usedcar-finder/sitemap.xml
+Sitemap: https://usedcar-finder.vercel.app/sitemap.xml

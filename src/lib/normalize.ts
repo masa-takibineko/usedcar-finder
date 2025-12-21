@@ -16,7 +16,7 @@ const resolveAssetUrl = (path: string) => {
   if (/^https?:\/\//i.test(path)) return path;
 
   const trimmed = path.replace(/^\/+/, "");
-  const baseRaw = import.meta.env.BASE_URL ?? "/";
+  const baseRaw = process.env.NEXT_PUBLIC_BASE_PATH ?? "/";
 
   if (typeof window !== "undefined" && window.location) {
     const baseUrl = new URL(baseRaw, window.location.origin);

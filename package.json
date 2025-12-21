@@ -3,42 +3,30 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://usedcar-finder.vercel.app",
   "scripts": {
-    "dev": "vite",
-    "prebuild": "node scripts/generate-seo.mjs",
-    "build": "tsc -b && vite build",
-    "postbuild": "cp dist/index.html dist/404.html",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "dev": "next dev",
+    "build": "node scripts/generate-seo.mjs && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "vercel --prod --confirm"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "next": "14.2.13",
     "papaparse": "^5.5.3",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-router-dom": "^7.9.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "recharts": "^3.3.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.36.0",
-    "@types/node": "^24.6.0",
+    "@types/node": "^20.14.11",
     "@types/papaparse": "^5.3.16",
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.4",
-    "eslint": "^9.36.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.22",
-    "gh-pages": "^6.3.0",
-    "globals": "^16.4.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.13",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.45.0",
-    "vite": "npm:rolldown-vite@7.1.14"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.1.14"
-  },
-  "homepage": "https://masa-takibineko.github.io/usedcar-finder"
+    "vercel": "^33.6.0"
+  }
 }

@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://masa-takibineko.github.io/usedcar-finder/</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://usedcar-finder.vercel.app/</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://masa-takibineko.github.io/usedcar-finder/price</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://usedcar-finder.vercel.app/price</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masa-takibineko.github.io/usedcar-finder/example</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://usedcar-finder.vercel.app/example</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masa-takibineko.github.io/usedcar-finder/risks</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://usedcar-finder.vercel.app/risks</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masa-takibineko.github.io/usedcar-finder/company</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://usedcar-finder.vercel.app/company</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://masa-takibineko.github.io/usedcar-finder/privacy</loc>
-    <lastmod>2025-12-17</lastmod>
+    <loc>https://usedcar-finder.vercel.app/privacy</loc>
+    <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
