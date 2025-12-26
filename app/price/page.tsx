@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import JsonLd from "../components/JsonLd";
 import Price from "../../src/pages/Price";
+import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
   title: "オークション代行手数料 | MOQ商会",
@@ -8,6 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Price />;
-}
+  const webPage = webPageJsonLd("/price", metadata.title as string, metadata.description as string);
+  const breadcrumb = breadcrumbJsonLd("/price", metadata.title as string);
 
+  return (
+    <>
+      <JsonLd id="price-jsonld" data={{ "@context": "https://schema.org", "@graph": [webPage, breadcrumb].filter(Boolean) }} />
+      <Price />
+    </>
+  );
+}

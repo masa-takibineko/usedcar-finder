@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import JsonLd from "./components/JsonLd";
 import App from "../src/App";
+import { breadcrumbJsonLd, webPageJsonLd } from "./lib/seo";
 
 export const metadata: Metadata = {
   title: "中古車購入を安くするならオークション代行検索MOQ商会へ",
@@ -11,6 +13,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <App />;
-}
+  const webPage = webPageJsonLd("/", "中古車購入を安くするならオークション代行検索MOQ商会へ", metadata.description || "");
+  const breadcrumb = breadcrumbJsonLd("/", "ホーム");
 
+  return (
+    <>
+      <JsonLd id="home-jsonld" data={{ "@context": "https://schema.org", "@graph": [webPage, breadcrumb].filter(Boolean) }} />
+      <App />
+    </>
+  );
+}

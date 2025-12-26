@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import JsonLd from "../components/JsonLd";
 import Example from "../../src/pages/Example";
+import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
   title: "料金の参考例 | MOQ商会",
@@ -8,6 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Example />;
-}
+  const webPage = webPageJsonLd("/example", metadata.title as string, metadata.description as string);
+  const breadcrumb = breadcrumbJsonLd("/example", metadata.title as string);
 
+  return (
+    <>
+      <JsonLd id="example-jsonld" data={{ "@context": "https://schema.org", "@graph": [webPage, breadcrumb].filter(Boolean) }} />
+      <Example />
+    </>
+  );
+}

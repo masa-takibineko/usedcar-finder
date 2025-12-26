@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import JsonLd from "../components/JsonLd";
 import Risks from "../../src/pages/Risks";
+import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
   title: "デメリットと注意点 | MOQ商会",
@@ -8,6 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Risks />;
-}
+  const webPage = webPageJsonLd("/risks", metadata.title as string, metadata.description as string);
+  const breadcrumb = breadcrumbJsonLd("/risks", metadata.title as string);
 
+  return (
+    <>
+      <JsonLd id="risks-jsonld" data={{ "@context": "https://schema.org", "@graph": [webPage, breadcrumb].filter(Boolean) }} />
+      <Risks />
+    </>
+  );
+}

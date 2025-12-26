@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://usedcar-finder.vercel.app";
@@ -54,9 +55,33 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const organization = {
+    "@type": "Organization",
+    "@id": `${siteUrl}#organization`,
+    name: "MOQ商会",
+    url: siteUrl,
+  };
+  const website = {
+    "@type": "WebSite",
+    "@id": `${siteUrl}#website`,
+    url: siteUrl,
+    name: "MOQ商会 | 中古車オークション代行",
+    publisher: { "@id": `${siteUrl}#organization` },
+    inLanguage: "ja-JP",
+  };
+  const siteGraph = { "@context": "https://schema.org", "@graph": [organization, website] };
+
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <Script
+          id="site-jsonld"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

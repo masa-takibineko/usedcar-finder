@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import JsonLd from "../components/JsonLd";
 import Privacy from "../../src/pages/Privacy";
+import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー | MOQ商会",
@@ -8,6 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Privacy />;
-}
+  const webPage = webPageJsonLd("/privacy", metadata.title as string, metadata.description as string);
+  const breadcrumb = breadcrumbJsonLd("/privacy", metadata.title as string);
 
+  return (
+    <>
+      <JsonLd id="privacy-jsonld" data={{ "@context": "https://schema.org", "@graph": [webPage, breadcrumb].filter(Boolean) }} />
+      <Privacy />
+    </>
+  );
+}
