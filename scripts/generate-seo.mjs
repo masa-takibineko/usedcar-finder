@@ -21,6 +21,7 @@ const routes = [
   "/risks",
   "/company",
   "/privacy",
+  "/faq",
 ];
 
 const toUrl = (routePath) => {
@@ -60,4 +61,3 @@ fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemapXml, "utf8");
 fs.writeFileSync(path.join(publicDir, "robots.txt"), robotsTxt, "utf8");
 
 console.log(`[SEO] Generated sitemap.xml and robots.txt for ${siteRoot}`);
-
