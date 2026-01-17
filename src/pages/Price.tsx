@@ -1,10 +1,23 @@
 import Link from "next/link";
-import auction from "../assets/auction.jpg";
-import auctionMobile from "../assets/auction-mobile.jpg";
 
 export default function Price() {
   return (
     <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
+      <div
+        style={{
+          textAlign: "center",
+          background: "linear-gradient(90deg, #ff7a1a 0%, #ff4800 50%, #ff2f8d 100%)",
+          color: "#fff",
+          fontSize: "22px",
+          fontWeight: 800,
+          padding: "16px",
+          borderRadius: "12px",
+          marginBottom: "20px",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+        }}
+      >
+        手数料期間限定半額キャンペーン実施中
+      </div>
       <h1 style={{ marginBottom: 8 }}>オークション代行手数料</h1>
       <p style={{ marginTop: 0, color: "#cbd5e1" }}>
         一般的な中古車販売店のような中間マージンは一切ありません。市場価格に沿った透明な料金でご提供します。
@@ -20,17 +33,11 @@ export default function Price() {
           borderRadius: 12,
           overflow: "hidden",
           boxShadow: "0 10px 35px rgba(0,0,0,.35)",
+          border: "1px solid rgba(255,255,255,.12)",
+          minHeight: "200px",
+          background: "rgba(255,255,255,.02)",
         }}
       >
-        <picture>
-          <source media="(max-width: 640px)" srcSet={auctionMobile.src} />
-          <img
-            src={auction.src}
-            alt="オークション会場での代行の様子"
-            style={{ display: "block", width: "100%", height: "auto" }}
-            loading="lazy"
-          />
-        </picture>
       </div>
 
       <h2 style={{ marginTop: 24 }}>落札価格別参考手数料一覧</h2>
@@ -93,7 +100,7 @@ export default function Price() {
       <section style={{ marginTop: 32, lineHeight: 1.7 }}>
         <h2>オークション代行手数料について</h2>
         <p>
-          MOQ商会のオークション代行手数料は <strong>35,800円〜</strong> です。この手数料には、車両選定のサポート、オークション入札代行、出品票の確認などが含まれます。
+          丸印モーターのオークション代行手数料は <strong>35,800円〜</strong> です。この手数料には、車両選定のサポート、オークション入札代行、出品票の確認などが含まれます。
         </p>
 
         <h3>総額はどのように決まるのか</h3>

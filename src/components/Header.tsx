@@ -11,6 +11,7 @@ export default function Header({ rightBadge }: { rightBadge?: React.ReactNode })
           <Link href="/privacy" style={{ color: "#93c5fd", textDecoration: "none" }}>プライバシーポリシー</Link>
           <Link href="/price" style={{ color: "#93c5fd", textDecoration: "none" }}>手数料</Link>
           <Link href="/faq" style={{ color: "#93c5fd", textDecoration: "none" }}>FAQ</Link>
+          <Link href="/testimonials" style={{ color: "#93c5fd", textDecoration: "none" }}>お客様の声</Link>
           {rightBadge ? <div className="badge">{rightBadge}</div> : null}
         </nav>
 

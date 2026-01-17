@@ -4,8 +4,8 @@ import Privacy from "../../src/pages/Privacy";
 import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
-  title: "プライバシーポリシー | MOQ商会",
-  description: "MOQ商会のプライバシーポリシー。個人情報の利用目的、第三者提供、安全管理、お問い合わせ窓口について記載します。",
+  title: "プライバシーポリシー | 丸印モーター",
+  description: "丸印モーターのプライバシーポリシー。個人情報の利用目的、第三者提供、安全管理、お問い合わせ窓口について記載します。",
   alternates: { canonical: "/privacy" },
 };
 

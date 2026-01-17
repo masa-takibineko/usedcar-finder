@@ -3,7 +3,7 @@ export default function Privacy() {
     <main style={{ maxWidth: "800px", margin: "60px auto", color: "#e2e8f0", lineHeight: 1.6 }}>
       <h1>プライバシーポリシー</h1>
       <p>
-        MOQ商会以下「当社」といいます）は、個人情報の保護を重要な責務と認識し、
+        丸印モーター（以下「当社」といいます）は、個人情報の保護を重要な責務と認識し、
         以下の方針に基づき個人情報の保護に努めます。
       </p>
       <h2>1. 個人情報の利用目的</h2>

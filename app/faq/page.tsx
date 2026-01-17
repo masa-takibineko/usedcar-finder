@@ -4,7 +4,7 @@ import JsonLd from "../components/JsonLd";
 import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
-  title: "よくある質問 | MOQ商会",
+  title: "よくある質問 | 丸印モーター",
   description: "オークション代行に関するよくある質問と回答をまとめました。費用、手続き、リスクなどの疑問点を解消します。",
   alternates: { canonical: "/faq" },
 };

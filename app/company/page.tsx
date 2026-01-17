@@ -4,8 +4,8 @@ import Company from "../../src/pages/Company";
 import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
 
 export const metadata: Metadata = {
-  title: "会社概要 | MOQ商会",
-  description: "中古車相場サイトの運営・オークション買取代行を行うMOQ商会の会社概要ページです。",
+  title: "会社概要 | 丸印モーター",
+  description: "中古車相場サイトの運営・オークション買取代行を行う丸印モーターの会社概要ページです。",
   alternates: { canonical: "/company" },
 };
 

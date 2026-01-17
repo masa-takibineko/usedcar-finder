@@ -162,6 +162,21 @@ export default function App() {
       <Header rightBadge={<>CSV: {all.length}件</>} />
 
       <section className="hero">
+        <div
+          style={{
+            textAlign: "center",
+            background: "linear-gradient(90deg, #ff7a1a 0%, #ff4800 50%, #ff2f8d 100%)",
+            color: "#fff",
+            fontSize: "22px",
+            fontWeight: 800,
+            padding: "16px",
+            borderRadius: "12px",
+            marginBottom: "20px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+          }}
+        >
+          手数料期間限定半額キャンペーン実施中
+        </div>
         <div className="best-fee-banner">
           <strong>代行手数料 業界最安値級 35,800円（税抜）〜</strong>
         </div>
@@ -228,9 +243,9 @@ export default function App() {
             <li>特定の車種・条件が明確な方</li>
           </ul>
           <p>一方で、「実車を見て即決したい方」には一般販売店の方が向く場合もあります。</p>
-          <h3>MOQ商会の強み</h3>
+          <h3>丸印モーターの強み</h3>
           <p>
-            MOQ商会では、業者オークションの相場データと出品票情報をもとに、価格・状態・リスクを可視化しながらサポートします。初めての方でも安心して利用できるよう、事前説明と相談を重視しています。
+            丸印モーターでは、業者オークションの相場データと出品票情報をもとに、価格・状態・リスクを可視化しながらサポートします。初めての方でも安心して利用できるよう、事前説明と相談を重視しています。
           </p>
         </section>
 
