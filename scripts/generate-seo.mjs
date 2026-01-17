@@ -22,6 +22,7 @@ const routes = [
   "/company",
   "/privacy",
   "/faq",
+  "/testimonials",
 ];
 
 const toUrl = (routePath) => {

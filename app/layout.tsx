@@ -11,6 +11,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
+  keywords: [
+    "中古車購入",
+    "中古車 安く",
+    "中古車 相場",
+    "オークション代行",
+    "業者オークション",
+    "代行手数料",
+    "最安",
+    "車探し",
+    "中古車探し",
+    "丸印モーター",
+    "オークション直販",
+    "中古車 価格",
+    "中古車 検索"
+  ],
   applicationName: "丸印モーター | 中古車オークション代行",
   referrer: "strict-origin-when-cross-origin",
   robots: {
@@ -19,16 +34,23 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     "max-snippet": -1,
     "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   openGraph: {
     type: "website",
     siteName: "丸印モーター | 中古車オークション代行",
     title,
     description,
-    url: "/",
+    url: siteUrl,
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "丸印モーター | 中古車オークション代行 OGP画像",
@@ -40,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og-image.jpg"],
+    images: [`${siteUrl}/og-image.jpg`],
   },
   alternates: {
     canonical: "/",
@@ -60,6 +82,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@id": `${siteUrl}#organization`,
     name: "丸印モーター",
     url: siteUrl,
+    logo: `${siteUrl}/og-image.jpg`,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      availableLanguage: "Japanese"
+    }
   };
   const website = {
     "@type": "WebSite",
@@ -68,8 +96,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: "丸印モーター | 中古車オークション代行",
     publisher: { "@id": `${siteUrl}#organization` },
     inLanguage: "ja-JP",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/?q={search_term_string}`
+      },
+      "query-input": "required name=search_term_string"
+    }
   };
-  const siteGraph = { "@context": "https://schema.org", "@graph": [organization, website] };
+  const autoDealer = {
+    "@type": "AutoDealer",
+    "@id": `${siteUrl}#autodealer`,
+    name: "丸印モーター 中古車オークション代行",
+    url: siteUrl,
+    description: "中古車購入を安く抑えるオークション直販代行。業界最安級の手数料35,800円〜で、相場を見ながら希望車種を検索できます。",
+    areaServed: "JP",
+    priceRange: "¥¥",
+    makesOffer: {
+      "@type": "Offer",
+      price: "35800",
+      priceCurrency: "JPY",
+      description: "オークション代行手数料（税抜）"
+    }
+  };
+  const siteGraph = { "@context": "https://schema.org", "@graph": [organization, website, autoDealer] };
 
   return (
     <html lang="ja">
