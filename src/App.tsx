@@ -375,13 +375,28 @@ export default function App() {
               <option value="none">なし</option>
             </select>
 
-            <div className="card" style={{ display: "flex", gap: 10, alignItems: "center" }}>
+            <div className="card" style={{ 
+              display: "flex", 
+              gap: 8, 
+              alignItems: "center",
+              flexWrap: "wrap",
+              padding: "12px",
+              minHeight: "auto"
+            }}>
               {["sr","ac","pw","ps","aw","leather"].map(key => (
-                <label key={key} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <label key={key} style={{ 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: 4,
+                  fontSize: "13px",
+                  whiteSpace: "nowrap",
+                  flexShrink: 0
+                }}>
                   <input
                     type="checkbox"
                     checked={!!(draft.equip as any)?.[key]}
                     onChange={e => setDraft({ ...draft, equip: { ...draft.equip, [key]: e.target.checked } })}
+                    style={{ margin: 0, flexShrink: 0 }}
                   />
                   {key.toUpperCase() === "LEATHER" ? "革" : key.toUpperCase()}
                 </label>
