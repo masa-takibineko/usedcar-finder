@@ -20,9 +20,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
-      <h1 style={{ marginBottom: 10 }}>お客様の声</h1>
-      <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#1a1a1a" }}>
+      <h1 style={{ marginBottom: 10, color: "#1a1a1a" }}>お客様の声</h1>
+      <p style={{ color: "#4a5568", lineHeight: 1.7 }}>
         実際にご利用いただいたお客様からの声をご紹介します。オークション代行サービスへのご感想や体験談をお寄せいただいています。
       </p>
 
@@ -33,8 +33,8 @@ export default function Testimonials() {
             style={{
               marginBottom: 28,
               padding: "20px",
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.12)",
+              background: "#ffffff",
+              border: "1px solid rgba(0,0,0,0.1)",
               borderRadius: "12px",
               boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
             }}
@@ -42,7 +42,7 @@ export default function Testimonials() {
             <p
               style={{
                 margin: "0 0 16px",
-                color: "#e2e8f0",
+                color: "#1a1a1a",
                 lineHeight: 1.8,
                 whiteSpace: "pre-line",
               }}
@@ -53,8 +53,8 @@ export default function Testimonials() {
               style={{
                 marginTop: "12px",
                 paddingTop: "12px",
-                borderTop: "1px solid rgba(255,255,255,0.1)",
-                color: "#cbd5e1",
+                borderTop: "1px solid rgba(0,0,0,0.08)",
+                color: "#4a5568",
                 fontSize: "14px",
                 fontWeight: 600,
               }}
@@ -66,7 +66,7 @@ export default function Testimonials() {
       </div>
 
       <p style={{ marginTop: 32 }}>
-        <Link href="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
+        <Link href="/" style={{ color: "#2563eb", textDecoration: "underline" }}>
           ← トップページに戻る
         </Link>
       </p>

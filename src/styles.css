@@ -1,12 +1,12 @@
 :root {
-    --bg-grad: linear-gradient(180deg, #0a1220 0%, #0b0f1c 45%, #080c16 100%);
-    --bg-glow-1: radial-gradient(1200px 800px at 12% 4%, rgba(95, 151, 255, 0.32) 0%, transparent 60%);
-    --bg-glow-2: radial-gradient(900px 700px at 88% 2%, rgba(49, 185, 255, 0.28) 0%, transparent 60%);
-    --card-bg: rgba(255, 255, 255, 0.08);
-    --card-bd: rgba(255, 255, 255, 0.25);
-    --txt: #e6edf3;
-    --muted: #a9b3c1;
-    --accent: #7dd3fc;
+    --bg-grad: linear-gradient(180deg, #fafafa 0%, #f5f5f0 45%, #f0f0eb 100%);
+    --bg-glow-1: radial-gradient(1200px 800px at 12% 4%, rgba(147, 197, 253, 0.15) 0%, transparent 60%);
+    --bg-glow-2: radial-gradient(900px 700px at 88% 2%, rgba(96, 165, 250, 0.12) 0%, transparent 60%);
+    --card-bg: #ffffff;
+    --card-bd: rgba(0, 0, 0, 0.1);
+    --txt: #1a1a1a;
+    --muted: #4a5568;
+    --accent: #2563eb;
   }
   
   * { box-sizing: border-box; }
@@ -14,7 +14,7 @@
   body {
     margin: 0;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: #080c16;
+    background: #f5f5f0;
     color: var(--txt);
     position: relative;
     overflow-x: hidden;
@@ -28,15 +28,15 @@
     background-size: cover, 100% 100%, 100% 100%;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.95;
+    opacity: 1;
   }
   
   /* Header */
   .site-header {
     position: sticky; top: 0; z-index: 50;
     backdrop-filter: saturate(140%) blur(12px);
-    background: rgba(6,12,22,0.55);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.9);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
   }
   .container {
     max-width: 1100px; margin: 0 auto; padding: 14px 20px;
@@ -44,10 +44,12 @@
   }
   .logo {
     font-weight: 800; letter-spacing: .3px; font-size: 18px;
+    color: var(--txt);
   }
   .badge {
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
     padding: 4px 8px; border-radius: 999px; font-size: 12px; color: var(--muted);
+    background: rgba(0,0,0,0.02);
   }
   
   /* Hero */
@@ -66,12 +68,12 @@
     margin: 8px 0 16px;
   }
   .seo-bullets span {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.1);
     padding: 8px 12px;
     border-radius: 999px;
     font-weight: 700;
-    color: #e2e8f0;
+    color: var(--txt);
   }
   @media (max-width: 560px) {
     .hero-lede { font-size: 15px; }
@@ -84,7 +86,7 @@
     border: 1px solid var(--card-bd);
     border-radius: 18px;
     padding: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
     width: 100%;
     overflow: hidden;
   }
@@ -103,8 +105,8 @@
   
   .input, .select {
     width: 100%; padding: 10px 12px; border-radius: 12px;
-    border: 1px solid rgba(255,255,255,.16);
-    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(0,0,0,.12);
+    background: #ffffff;
     color: var(--txt);
     outline: none;
     min-width: 0;
@@ -122,8 +124,8 @@
     margin-top: 12px;
   }
   .kpi {
-    background: rgba(125, 211, 252, 0.08);
-    border: 1px solid rgba(125, 211, 252, 0.25);
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
     padding: 8px 12px; border-radius: 12px; color: var(--accent);
     font-weight: 600; font-size: 14px;
   }
@@ -143,15 +145,15 @@
 
     /* プルダウン（select）内の文字を濃くする */
   .select {
-    color: #ffffff !important;       /* 通常時を白く */
-    font-weight: 600;                /* 太字に */
+    color: var(--txt) !important;
+    font-weight: 600;
   }
 
   /* option 要素自体も上書き（ブラウザによってはこれも必要） */
   .select option {
-    color: #000000;                  /* プルダウン展開時の文字色を黒 */
+    color: #000000;
     font-weight: 500;
-    background-color: #f0f0f0;       /* 背景は薄いグレーで見やすく */
+    background-color: #ffffff;
   }
   /* ===== Floating LINE button ===== */
   .floating-line {
@@ -204,19 +206,19 @@
     background-color: #1d4ed8; /* 少し濃く */
   }
   /* 検索結果 2行構成 + 装備表示 + 価格強調 */
-  .result-row { border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .result-row td { padding: 10px 8px; vertical-align: top; color: #e2e8f0; line-height: 1.4; }
+  .result-row { border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .result-row td { padding: 10px 8px; vertical-align: top; color: var(--txt); line-height: 1.4; }
 
-  .info-cell .row-top { font-weight: 600; font-size: 15px; color: #f8fafc; }
-  .info-cell .row-bottom { font-size: 13px; color: #cbd5e1; margin-top: 4px; }
+  .info-cell .row-top { font-weight: 600; font-size: 15px; color: var(--txt); }
+  .info-cell .row-bottom { font-size: 13px; color: var(--muted); margin-top: 4px; }
 
   .price-cell {
     text-align: right;
     font-weight: 800;
-    color: #facc15;   /* 黄色系で強調 */
+    color: #dc2626;   /* 赤系で強調 */
     font-size: 18px;
     vertical-align: middle;
-    border-left: 1px solid rgba(255,255,255,0.1);
+    border-left: 1px solid rgba(0,0,0,0.08);
     width: 140px;
   }
   .price-value {
@@ -233,25 +235,25 @@
   padding: 4px 8px;
   margin: 0 6px 6px 0;
   border-radius: 999px;
-  background: rgba(148, 163, 184, 0.18); /* slate-400/20 */
-  color: #e2e8f0;
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--txt);
   font-size: 12px;
   font-weight: 600;
 }
-.chip.maker { background: rgba(96, 165, 250, 0.22); } /* 青寄り */
-.chip.model { background: rgba(74, 222, 128, 0.22); } /* 緑寄り */
+.chip.maker { background: rgba(96, 165, 250, 0.15); } /* 青寄り */
+.chip.model { background: rgba(74, 222, 128, 0.15); } /* 緑寄り */
 
 /* 2段目の区切り */
-.row-bottom .sep { color: #64748b; }
+.row-bottom .sep { color: #94a3b8; }
 
 /* 価格セル（右端強調） */
 .price-cell {
   text-align: right;
   font-weight: 800;
-  color: #facc15;           /* 黄色系で強調 */
+  color: #dc2626;           /* 赤系で強調 */
   font-size: 18px;
   vertical-align: middle;
-  border-left: 1px solid rgba(255,255,255,0.1);
+  border-left: 1px solid rgba(0,0,0,0.08);
   width: 140px;
 }
 .price-value { line-height: 2.2em; } /* 2行の高さに相当 */
@@ -261,14 +263,14 @@
   .info-cell .row-top, .info-cell .row-bottom { display: block; }
 }
 .notice {
-  background: rgba(148,163,184,.12);
-  border: 1px solid rgba(148,163,184,.25);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12) 0%, rgba(252, 211, 77, 0.08) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.25);
   padding: 16px;
   border-radius: 12px;
   margin-bottom: 12px;
 }
-.notice h2 { margin: 0 0 6px; color: #f8fafc; }
-.notice p  { margin: 0; color: #e2e8f0; }
+.notice h2 { margin: 0 0 6px; color: #d97706; }
+.notice p  { margin: 0; color: var(--muted); }
 
 .mobile-hero-image { display: none; }
 @media (max-width: 960px) {
@@ -281,10 +283,12 @@
   }
 }
 
-.prose h3 { margin: 14px 0 8px; color: #e2e8f0; }
+.prose h2 { margin: 14px 0 8px; color: var(--txt); }
+.prose h3 { margin: 14px 0 8px; color: var(--txt); }
 .prose ol { margin: 0 0 8px 20px; }
-.prose li { margin: 4px 0; color: #cbd5e1; }
-.prose a  { color: #93c5fd; text-decoration: underline; }
+.prose li { margin: 4px 0; color: var(--muted); }
+.prose p { color: var(--muted); }
+.prose a  { color: #2563eb; text-decoration: underline; }
 
   /* ▼ 固定表示の公式LINE追加ボタン */
   .line-banner {
@@ -343,8 +347,8 @@
   }
 }
 
-/* コンテンツ側の薄い黒オーバーレイ（文字を見やすくする） */
+/* コンテンツ側の薄いオーバーレイ（文字を見やすくする） */
 .site-bg-overlay {
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.55); /* もっと明るくしたければ 0.3 とかに */
+  background-color: rgba(255, 255, 255, 0.85); /* オフホワイトベース - より明るく */
 }

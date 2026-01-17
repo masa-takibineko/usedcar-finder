@@ -11,23 +11,23 @@ const faqs: Array<{ q: string; a: string }> = [
 
 export default function FAQ() {
   return (
-    <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#e2e8f0" }}>
-      <h1 style={{ marginBottom: 10 }}>よくある質問（FAQ）</h1>
-      <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#1a1a1a" }}>
+      <h1 style={{ marginBottom: 10, color: "#1a1a1a" }}>よくある質問（FAQ）</h1>
+      <p style={{ color: "#4a5568", lineHeight: 1.7 }}>
         初めてオークション代行を利用する方が不安に感じやすいポイントをまとめました。ご不明点はお気軽にお問い合わせください。
       </p>
 
       <div style={{ marginTop: 20 }}>
         {faqs.map((item, idx) => (
           <section key={idx} style={{ marginBottom: 18 }}>
-            <h3 style={{ margin: "0 0 6px" }}>Q. {item.q}</h3>
-            <p style={{ margin: 0, color: "#e2e8f0", lineHeight: 1.6 }}>A. {item.a}</p>
+            <h3 style={{ margin: "0 0 6px", color: "#1a1a1a" }}>Q. {item.q}</h3>
+            <p style={{ margin: 0, color: "#4a5568", lineHeight: 1.6 }}>A. {item.a}</p>
           </section>
         ))}
       </div>
 
       <p style={{ marginTop: 24 }}>
-        <Link href="/" style={{ color: "#93c5fd", textDecoration: "underline" }}>
+        <Link href="/" style={{ color: "#2563eb", textDecoration: "underline" }}>
           ← トップページに戻る
         </Link>
       </p>
