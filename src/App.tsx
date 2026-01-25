@@ -162,19 +162,7 @@ export default function App() {
       <Header rightBadge={<>CSV: {all.length}件</>} />
 
       <section className="hero">
-        <div
-          style={{
-            textAlign: "center",
-            background: "linear-gradient(90deg, #ff7a1a 0%, #ff4800 50%, #ff2f8d 100%)",
-            color: "#fff",
-            fontSize: "22px",
-            fontWeight: 800,
-            padding: "16px",
-            borderRadius: "12px",
-            marginBottom: "20px",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-          }}
-        >
+        <div className="hero-announcement">
           手数料期間限定半額キャンペーン実施中
         </div>
         <div className="best-fee-banner">
@@ -190,11 +178,8 @@ export default function App() {
           <span>全国の業者オークション相場を横断チェック</span>
           <span>LINEで無料相談・非公開在庫も提案</span>
         </div>
-        <div className="notice" style={{
-          background: "linear-gradient(135deg, rgba(251, 191, 36, 0.12) 0%, rgba(252, 211, 77, 0.08) 100%)",
-          border: "1px solid rgba(251, 191, 36, 0.25)",
-        }}>
-          <h2 style={{ color: "#d97706" }}>「オークション直販」で、中古車購入の常識を変える。</h2>
+        <div className="notice">
+          <h2>「オークション直販」で、中古車購入の常識を変える。</h2>
           <p>
             オークション相場を知れば、もう高値で買わされない。中間マージンをカットし、
             <strong>適正価格</strong>で理想の車を手に入れましょう。
