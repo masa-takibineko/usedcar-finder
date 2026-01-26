@@ -8,11 +8,11 @@ export default function Header({ rightBadge }: { rightBadge?: React.ReactNode })
         <div className="logo">中古車オークション直販代行サイト</div>
         <nav className="header-nav">
           <div className="nav-links">
-            <Link href="/company" style={{ color: "#2563eb", textDecoration: "none" }}>会社概要</Link>
-            <Link href="/privacy" style={{ color: "#2563eb", textDecoration: "none" }}>プライバシー</Link>
-            <Link href="/price" style={{ color: "#2563eb", textDecoration: "none" }}>手数料</Link>
-            <Link href="/faq" style={{ color: "#2563eb", textDecoration: "none" }}>FAQ</Link>
-            <Link href="/testimonials" style={{ color: "#2563eb", textDecoration: "none" }}>お客様の声</Link>
+            <Link href="/company" style={{ color: "#1e3a8a", textDecoration: "none" }}>会社概要</Link>
+            <Link href="/privacy" style={{ color: "#1e3a8a", textDecoration: "none" }}>プライバシー</Link>
+            <Link href="/price" style={{ color: "#1e3a8a", textDecoration: "none" }}>手数料</Link>
+            <Link href="/faq" style={{ color: "#1e3a8a", textDecoration: "none" }}>FAQ</Link>
+            <Link href="/testimonials" style={{ color: "#1e3a8a", textDecoration: "none" }}>お客様の声</Link>
           </div>
           {rightBadge ? <div className="badge">{rightBadge}</div> : null}
         </nav>

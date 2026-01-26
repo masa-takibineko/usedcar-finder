@@ -165,14 +165,14 @@ export default function App() {
         <div
           style={{
             textAlign: "center",
-            background: "linear-gradient(90deg, #ff7a1a 0%, #ff4800 50%, #ff2f8d 100%)",
+            background: "#991b1b",
             color: "#fff",
-            fontSize: "22px",
-            fontWeight: 800,
-            padding: "16px",
-            borderRadius: "12px",
+            fontSize: "18px",
+            fontWeight: 500,
+            padding: "14px",
+            borderRadius: "6px",
             marginBottom: "20px",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.15)",
           }}
         >
           手数料期間限定半額キャンペーン実施中
@@ -191,10 +191,10 @@ export default function App() {
           <span>LINEで無料相談・非公開在庫も提案</span>
         </div>
         <div className="notice" style={{
-          background: "linear-gradient(135deg, rgba(251, 191, 36, 0.12) 0%, rgba(252, 211, 77, 0.08) 100%)",
+          background: "rgba(251, 191, 36, 0.08)",
           border: "1px solid rgba(251, 191, 36, 0.25)",
         }}>
-          <h2 style={{ color: "#d97706" }}>「オークション直販」で、中古車購入の常識を変える。</h2>
+          <h2 style={{ color: "#92400e" }}>「オークション直販」で、中古車購入の常識を変える。</h2>
           <p>
             オークション相場を知れば、もう高値で買わされない。中間マージンをカットし、
             <strong>適正価格</strong>で理想の車を手に入れましょう。
@@ -227,32 +227,32 @@ export default function App() {
         {/* オークション解説セクション */}
         <section className="prose" style={{ 
           marginTop: 28, 
-          padding: "24px",
-          background: "linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(147, 197, 253, 0.05) 100%)",
-          borderRadius: "16px",
-          border: "1px solid rgba(59, 130, 246, 0.15)"
+          padding: "20px",
+          background: "rgba(30, 58, 138, 0.06)",
+          borderRadius: "8px",
+          border: "1px solid rgba(30, 58, 138, 0.15)"
         }}>
-          <h2 style={{ color: "#1e40af", marginTop: 0 }}>中古車オークションとは？</h2>
+          <h2 style={{ color: "#1e3a8a", marginTop: 0 }}>中古車オークションとは？</h2>
           <p>
             中古車オークションとは、全国の業者が出品する車両を会員制の市場で売買する仕組みです。一般的な中古車販売店では、仕入れ後に店舗維持費や人件費、利益が上乗せされますが、オークションではそれらの中間コストが抑えられるため、市場価格に近い金額で中古車を購入できるという特徴があります。
           </p>
-          <h3 style={{ color: "#1e40af" }}>なぜ中古車を安く購入できるのか</h3>
+          <h3 style={{ color: "#1e3a8a" }}>なぜ中古車を安く購入できるのか</h3>
           <p>
             中古車オークションが安い理由は、仕入れから販売までの流通経路が短いからです。展示場や広告費を持たない分、車両価格そのものにコストが集中します。さらに、相場は入札形式で決まるため、過剰な価格設定が起きにくく、適正価格での購入が可能になります。
           </p>
-          <h3 style={{ color: "#1e40af" }}>通常の中古車販売との違い</h3>
+          <h3 style={{ color: "#1e3a8a" }}>通常の中古車販売との違い</h3>
           <p>
             一般的な中古車販売では「完成された価格」が提示されますが、オークション代行では
             <strong>「車両落札価格」「オークション代行手数料」「必要な諸費用」</strong>を分けて確認できます。価格の内訳が明確なため、納得感を持って判断できるのが大きな違いです。
           </p>
-          <h3 style={{ color: "#1e40af" }}>どんな人に向いているか</h3>
+          <h3 style={{ color: "#1e3a8a" }}>どんな人に向いているか</h3>
           <ul>
             <li>少しでも総額を抑えて車を購入したい方</li>
             <li>相場を見ながら納得して決めたい方</li>
             <li>特定の車種・条件が明確な方</li>
           </ul>
           <p>一方で、「実車を見て即決したい方」には一般販売店の方が向く場合もあります。</p>
-          <h3 style={{ color: "#1e40af" }}>丸印モーターの強み</h3>
+          <h3 style={{ color: "#1e3a8a" }}>丸印モーターの強み</h3>
           <p>
             丸印モーターでは、業者オークションの相場データと出品票情報をもとに、価格・状態・リスクを可視化しながらサポートします。初めての方でも安心して利用できるよう、事前説明と相談を重視しています。
           </p>
@@ -261,12 +261,12 @@ export default function App() {
         {/* ▼ 使い方ガイド */}
         <div className="prose" style={{ 
           marginTop: 28,
-          padding: "24px",
-          background: "linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(74, 222, 128, 0.05) 100%)",
-          borderRadius: "16px",
-          border: "1px solid rgba(34, 197, 94, 0.15)"
+          padding: "20px",
+          background: "rgba(22, 101, 52, 0.06)",
+          borderRadius: "8px",
+          border: "1px solid rgba(22, 101, 52, 0.15)"
         }}>
-          <h2 style={{ color: "#15803d", marginTop: 0 }}>ご利用の流れ</h2>
+          <h2 style={{ color: "#166534", marginTop: 0 }}>ご利用の流れ</h2>
           <p style={{marginTop:20}}>
             オークション代行の注意点については  
             <Link href="/risks" className="prose-link">こちら</Link> をご確認ください。
@@ -303,12 +303,12 @@ export default function App() {
         {/* 既存の見出し＆説明（そのままでOK） */}
         <div style={{
           marginTop: 32,
-          padding: "20px",
-          background: "linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(192, 132, 252, 0.05) 100%)",
-          borderRadius: "16px",
-          border: "1px solid rgba(168, 85, 247, 0.15)"
+          padding: "18px",
+          background: "rgba(30, 58, 138, 0.06)",
+          borderRadius: "8px",
+          border: "1px solid rgba(30, 58, 138, 0.15)"
         }}>
-          <h2 style={{ color: "#7c3aed", marginTop: 0, marginBottom: 12 }}>🚗 車両検索</h2>
+          <h2 style={{ color: "#1e3a8a", marginTop: 0, marginBottom: 12 }}>🚗 車両検索</h2>
           <p style={{ margin: 0, color: "#4a5568" }}>条件を選んで「検索」を押すと、該当の行データを全て表示します。</p>
         </div>
         {/* …以下、あなたの既存の検索カードUI */}
@@ -420,23 +420,23 @@ export default function App() {
       <section className="results">
         <div style={{
           marginTop: 32,
-          padding: "20px",
-          background: "linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, rgba(248, 113, 113, 0.05) 100%)",
-          borderRadius: "16px",
-          border: "1px solid rgba(239, 68, 68, 0.15)",
+          padding: "18px",
+          background: "rgba(153, 27, 27, 0.06)",
+          borderRadius: "8px",
+          border: "1px solid rgba(153, 27, 27, 0.15)",
           marginBottom: 16
         }}>
-          <h2 style={{ color: "#dc2626", marginTop: 0, marginBottom: 12 }}>📊 検索結果</h2>
+          <h2 style={{ color: "#991b1b", marginTop: 0, marginBottom: 12 }}>📊 検索結果</h2>
           <div className="kpis"><div className="kpi">該当件数: {filtered.length}</div></div>
         </div>
 
         {filtered.length > 0 && (
-          <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid rgba(0,0,0,.12)" }}>
+          <div style={{ overflowX: "auto", borderRadius: 8, border: "1px solid rgba(0,0,0,.15)" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
               <thead>
                 <tr>
                   {tableHeaders.map(h => (
-                    <th key={h} style={{ textAlign:"left", padding:"10px 8px", borderBottom:"1px solid rgba(0,0,0,.12)", background:"rgba(0,0,0,.02)", color:"var(--txt)" }}>{h}</th>
+                    <th key={h} style={{ textAlign:"left", padding:"10px 8px", borderBottom:"1px solid rgba(0,0,0,.15)", background:"rgba(0,0,0,.03)", color:"var(--txt)" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
