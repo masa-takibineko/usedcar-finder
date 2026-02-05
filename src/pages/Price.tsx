@@ -2,8 +2,9 @@ import Link from "next/link";
 
 export default function Price() {
   return (
-    <main style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#1a1a1a" }}>
+    <main className="price-page" style={{ maxWidth: 860, margin: "40px auto", padding: "0 16px", color: "#1a1a1a" }}>
       <div
+        className="campaign-banner"
         style={{
           textAlign: "center",
           background: "linear-gradient(90deg, #ff7a1a 0%, #ff4800 50%, #ff2f8d 100%)",
@@ -18,8 +19,8 @@ export default function Price() {
       >
         手数料期間限定半額キャンペーン実施中
       </div>
-      <h1 style={{ marginBottom: 8, color: "#1a1a1a" }}>オークション代行手数料</h1>
-      <p style={{ marginTop: 0, color: "#4a5568" }}>
+      <h1 className="price-heading" style={{ marginBottom: 8, color: "#1a1a1a" }}>オークション代行手数料</h1>
+      <p className="price-intro" style={{ marginTop: 0, color: "#4a5568" }}>
         一般的な中古車販売店のような中間マージンは一切ありません。市場価格に沿った透明な料金でご提供します。
       </p>
       <p style={{ marginTop: 16 }}>
@@ -27,8 +28,8 @@ export default function Price() {
         <Link href="/risks" className="prose-link">こちら</Link> をご覧ください。
       </p>
 
-      <h2 style={{ marginTop: 24, color: "#1a1a1a" }}>落札価格別参考手数料一覧</h2>
-      <div style={{
+      <h2 className="price-subheading" style={{ marginTop: 24, color: "#1a1a1a" }}>落札価格別参考手数料一覧</h2>
+      <div className="price-table" style={{
         marginTop: 10, border: "1px solid rgba(0,0,0,.12)",
         borderRadius: 12, overflow: "hidden", background: "#ffffff"
       }}>
