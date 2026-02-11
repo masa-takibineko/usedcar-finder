@@ -1,11 +1,15 @@
 export default function Company() {
   return (
-    <main style={{ maxWidth: "800px", margin: "40px auto", padding: "24px 16px", color: "#1a1a1a", lineHeight: 1.6, background: "#fff", borderRadius: "12px", boxShadow: "0 6px 12px rgba(0,0,0,0.08)", border: "1px solid #e5e5e5" }}>
-      <h1 style={{ color: "#1a1a1a" }}>会社概要</h1>
-      <p style={{ color: "#4a5568" }}>
+    <main style={{ maxWidth: "800px", margin: "30px auto", padding: "20px 14px", color: "#1a1a1a", lineHeight: 1.5, background: "#fff", borderRadius: "12px", boxShadow: "0 6px 12px rgba(0,0,0,0.08)", border: "1px solid #e5e5e5", fontSize: "12px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
+        <img src="/logo.jpg" alt="丸印モーター ロゴ" style={{ height: 32, width: "auto" }} />
+        <strong style={{ fontSize: "15px", letterSpacing: "0.05em" }}>丸印モーター</strong>
+        <span style={{ fontSize: "13px", color: "#4a5568" }}>｜ 会社概要</span>
+      </div>
+      <p style={{ color: "#4a5568", margin: "0 0 10px" }}>
         丸印モーターは、中古車を少しでも適正価格で購入したい方をサポートするために運営しています。業者オークションの相場情報と出品票を活用し、条件に合った車両を透明な価格で提案します。
       </p>
-      <table style={{ width: "100%", marginTop: "20px", borderCollapse: "collapse", border: "1px solid rgba(0,0,0,.1)", borderRadius: "8px", overflow: "hidden" }}>
+      <table style={{ width: "100%", marginTop: "12px", borderCollapse: "collapse", border: "1px solid rgba(0,0,0,.1)", borderRadius: "8px", overflow: "hidden", fontSize: "12px" }}>
         <tbody>
           <tr style={{ borderBottom: "1px solid rgba(0,0,0,.08)" }}><td style={{ padding: "12px", background: "rgba(0,0,0,.02)", fontWeight: 600, color: "#1a1a1a" }}>会社名</td><td style={{ padding: "12px", color: "#1a1a1a" }}>丸印モーター</td></tr>
           <tr style={{ borderBottom: "1px solid rgba(0,0,0,.08)" }}><td style={{ padding: "12px", background: "rgba(0,0,0,.02)", fontWeight: 600, color: "#1a1a1a" }}>所在地</td><td style={{ padding: "12px", color: "#1a1a1a" }}>大阪府北区梅田1-2-2第2ビル12-12</td></tr>
@@ -13,13 +17,13 @@ export default function Company() {
         </tbody>
       </table>
 
-      <section style={{ marginTop: 24 }}>
-        <h2 style={{ color: "#1a1a1a" }}>事業内容</h2>
-        <p style={{ color: "#4a5568" }}>
+      <section style={{ marginTop: 18 }}>
+        <h2 style={{ color: "#1a1a1a", fontSize: "15px", marginBottom: 6 }}>事業内容</h2>
+        <p style={{ color: "#4a5568", margin: 0 }}>
           中古車オークション代行を中心に、相場情報の提供や購入サポートを行っています。これまで多くの相談を受け、車種や条件に応じた提案を行ってきました。対応エリアや時間についても、柔軟に相談可能です。
         </p>
-        <h2 style={{ color: "#1a1a1a" }}>連絡・相談方法</h2>
-        <p style={{ color: "#4a5568" }}>
+        <h2 style={{ color: "#1a1a1a", fontSize: "15px", margin: "12px 0 6px" }}>連絡・相談方法</h2>
+        <p style={{ color: "#4a5568", margin: 0 }}>
           LINEを中心に問い合わせを受け付けています。購入前の相談だけでも対応しています。
         </p>
       </section>

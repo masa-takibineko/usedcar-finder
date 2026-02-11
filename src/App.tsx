@@ -160,6 +160,15 @@ export default function App() {
       <Header rightBadge={<>CSV: {all.length}件</>} />
 
       <section className="hero">
+        <div className="hero-visual">
+          <img
+            src="/advertise.jpg"
+            alt="オークション直販イメージ"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </div>
         <div
           style={{
             textAlign: "center",
@@ -203,16 +212,6 @@ export default function App() {
         </div>
 
         {/* ヒーロー画像（全幅・見切れ防止） */}
-        <div className="hero-visual">
-          <img
-            src="/advertise.jpg"
-            alt="オークション会場に並ぶ車両"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
-        </div>
-
         {/* ▼ 公式LINEボタン（固定配置） */}
         <a
           href="https://lin.ee/l6P8Wvx"  // ← あなたのLINE公式URLに置き換え

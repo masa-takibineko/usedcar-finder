@@ -5,7 +5,10 @@ export default function Header({ rightBadge }: { rightBadge?: React.ReactNode })
   return (
     <header className="site-header">
       <div className="container">
-        <div className="logo">中古車オークション直販代行サイト</div>
+        <div className="logo" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+          <img src="/logo.jpg" alt="丸印モーター" style={{ height: 26, width: "auto" }} />
+          <span>丸印モーター</span>
+        </div>
         <nav className="header-nav">
           <div className="nav-links">
             <Link href="/company" style={{ color: "#1e3a8a", textDecoration: "none" }}>会社概要</Link>
