@@ -36,7 +36,7 @@ export default function Price() {
 
         <div className="hero-image-wrap">
           <div className="burst">半額</div>
-          <img src="/auction-promo.jpg" alt="オークション直販イメージ" />
+          <img src="/img9083.jpg" alt="オークション直販イメージ" />
         </div>
       </section>
 

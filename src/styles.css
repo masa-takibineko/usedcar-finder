@@ -82,49 +82,48 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      padding: 10px 16px;
-      gap: 10px;
-    }
-    .container .logo {
-      width: 100%;
-      text-align: center;
-      font-size: 15px;
-      margin-bottom: 0;
-    }
-    .header-nav {
-      width: 100%;
-      margin-left: 0;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .nav-links {
-      width: 100%;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 8px 12px;
+    gap: 6px;
   }
-  @media (max-width: 560px) {
-    .nav-links a {
-      font-size: 13px;
-      padding: 6px 10px;
+  .container .logo {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  .header-nav {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 560px) {
+  .nav-links a {
+      font-size: 11px;
+      padding: 4px 8px;
       border-radius: var(--radius-sm);
       transition: var(--transition);
-      font-weight: 500;
-    }
+      font-weight: 600;
+  }
   .nav-links a:hover {
     background: rgba(30, 58, 138, 0.08);
     color: var(--accent-hover);
   }
     .header-nav .badge {
-      margin-left: auto;
-      font-size: 11px;
+      display: none;
     }
-  }
+}
   .logo {
     font-weight: 600; letter-spacing: 0.3px; font-size: 18px;
     color: var(--txt);
@@ -141,11 +140,11 @@
   
   /* Hero */
   .hero {
-    max-width: 1100px; margin: 14px auto 14px; padding: 0 20px;
+    max-width: 1100px; margin: 10px auto 12px; padding: 0 14px;
     position: relative;
   }
   .hero-visual {
-    margin: 4px auto 6px;
+    margin: 2px auto 6px;
     max-width: 640px;
     border: 6px solid #ff0101;
     border-radius: 12px;
@@ -213,11 +212,13 @@
     box-shadow: 0 14px 18px rgba(0,0,0,0.22);
   }
   @media (max-width: 560px) {
-    .hero h1 { font-size: clamp(22px, 6vw, 30px); }
-    .hero-lede { font-size: 14px; }
-    .hero p { font-size: 14px; }
+    .hero { margin: 6px auto 8px; padding: 0 10px; }
+    .hero h1 { font-size: clamp(20px, 5.6vw, 26px); }
+    .hero-lede { font-size: 13px; }
+    .hero p { font-size: 13px; }
     .seo-bullets { gap: 6px; }
-    .seo-bullets span { font-size: 12px; padding: 7px 12px; }
+    .seo-bullets span { font-size: 11px; padding: 6px 10px; }
+    .hero-visual { max-width: 90%; border-width: 4px; }
   }
   
 /* Glass card */
