@@ -5,9 +5,9 @@ export default function Header({ rightBadge }: { rightBadge?: React.ReactNode })
   return (
     <header className="site-header">
       <div className="container">
-        <div className="logo" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-          <img src="/logo.jpg" alt="丸印モーター" style={{ height: 26, width: "auto" }} />
-          <span>丸印モーター</span>
+        <div className="logo" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+          <img src="/logo.jpg" alt="丸印モーター" style={{ height: 32, width: "auto" }} />
+          <span style={{ fontSize: 16, fontWeight: 800 }}>丸印モーター</span>
         </div>
         <nav className="header-nav">
           <div className="nav-links">
