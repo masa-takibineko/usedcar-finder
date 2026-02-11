@@ -18,7 +18,7 @@ export default function Risks() {
           </div>
         </div>
         <div className="poster-img">
-          <img src="/img9083.jpg" alt="オークション車両イメージ" onError={(e) => { e.currentTarget.src = "/img9083.jpg?fallback"; }} />
+          <img src="/img9081.jpg" alt="オークション車両イメージ" onError={(e) => { e.currentTarget.src = "/img9081.jpg?fallback"; }} />
           <div className="burst">注意</div>
         </div>
       </section>
