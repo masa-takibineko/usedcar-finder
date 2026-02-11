@@ -6,8 +6,8 @@ export default function Header({ rightBadge }: { rightBadge?: React.ReactNode })
     <header className="site-header">
       <div className="container">
         <div className="logo" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-          <img src="/logo.jpg" alt="丸印モーター" style={{ height: 32, width: "auto" }} />
-          <span style={{ fontSize: 16, fontWeight: 800 }}>丸印モーター</span>
+          <img src="/logo.jpg" alt="丸印モーター" className="logo-img" />
+          <span className="logo-text">丸印モーター</span>
           <span className="mobile-tagline">中古車オークションサイト</span>
         </div>
         <nav className="header-nav">
