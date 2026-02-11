@@ -133,16 +133,16 @@
       display: none;
     }
     .mobile-tagline {
-      font-size: 13px;
+      font-size: 15px;
     }
   }
 .logo {
-    font-weight: 700; letter-spacing: 0.3px; font-size: 19px;
+    font-weight: 800; letter-spacing: 0.32px; font-size: 20px;
     color: var(--txt);
     transition: var(--transition);
   }
-.logo-img { height: 34px; width: auto; }
-.logo-text { font-size: 17px; font-weight: 800; }
+.logo-img { height: 40px; width: auto; }
+.logo-text { font-size: 20px; font-weight: 900; }
   .badge {
     border: 1px solid rgba(0,0,0,0.15);
     padding: 6px 12px; border-radius: 4px; font-size: 12px; 
