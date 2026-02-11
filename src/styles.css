@@ -142,7 +142,7 @@
     transition: var(--transition);
   }
 .logo-img { height: 40px; width: auto; }
-.logo-text { font-size: 20px; font-weight: 900; }
+.logo-text { font-size: 18px; font-weight: 850; }
   .badge {
     border: 1px solid rgba(0,0,0,0.15);
     padding: 6px 12px; border-radius: 4px; font-size: 12px; 
