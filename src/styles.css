@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap");
+
 :root {
-    --bg-grad: linear-gradient(180deg, #f8f8f8 0%, #f5f5f5 45%, #f0f0f0 100%);
-    --bg-glow-1: radial-gradient(1200px 800px at 12% 4%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
-    --bg-glow-2: radial-gradient(900px 700px at 88% 2%, rgba(59, 130, 246, 0.04) 0%, transparent 60%);
-    --card-bg: #ffffff;
-    --card-bd: rgba(0, 0, 0, 0.12);
-    --txt: #1a1a1a;
-    --muted: #4a4a4a;
-    --accent: #1e3a8a;
-    --accent-hover: #1e40af;
-    --success: #166534;
-    --warning: #92400e;
-    --error: #991b1b;
+    --bg-grad: linear-gradient(135deg, #fff200 0%, #ffd200 45%, #fff9c4 100%);
+    --bg-glow-1: radial-gradient(1200px 800px at 12% 4%, rgba(255, 0, 0, 0.12) 0%, transparent 60%);
+    --bg-glow-2: radial-gradient(900px 700px at 88% 2%, rgba(0, 85, 196, 0.12) 0%, transparent 60%);
+    --card-bg: #fffef6;
+    --card-bd: rgba(255, 1, 1, 0.35);
+    --txt: #0d0d0d;
+    --muted: #2f2f2f;
+    --accent: #ff0101;
+    --accent-hover: #c40000;
+    --success: #0f5132;
+    --warning: #b45309;
+    --error: #9f1239;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
     --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
@@ -26,23 +28,30 @@
   html, body, #root { height: 100%; }
   body {
     margin: 0;
-    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", "MS PGothic", "Noto Sans JP", sans-serif;
-    background: #f8f8f8;
+    font-family: "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", "MS PGothic", "Noto Sans JP", sans-serif;
+    background: #ffed00;
     color: var(--txt);
+    font-size: 13px;
     position: relative;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.7;
-    font-weight: 400;
+    font-weight: 500;
   }
   body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: var(--bg-grad), var(--bg-glow-1), var(--bg-glow-2);
-    background-repeat: no-repeat;
-    background-size: cover, 100% 100%, 100% 100%;
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.22),
+      rgba(255, 255, 255, 0.22) 18px,
+      transparent 18px,
+      transparent 36px
+    ), var(--bg-grad), var(--bg-glow-1), var(--bg-glow-2);
+    background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+    background-size: auto, cover, 100% 100%, 100% 100%;
     pointer-events: none;
     z-index: -1;
     opacity: 1;
@@ -52,9 +61,9 @@
   .site-header {
     position: sticky; top: 0; z-index: 50;
     backdrop-filter: saturate(180%) blur(20px);
-    background: rgba(255,255,255,0.98);
-    border-bottom: 2px solid rgba(0,0,0,0.1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    background: rgba(255, 237, 0, 0.92);
+    border-bottom: 4px solid #ff0101;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
     transition: var(--transition);
   }
   .container {
@@ -135,32 +144,73 @@
     max-width: 1100px; margin: 38px auto 20px; padding: 0 20px;
     position: relative;
   }
-  .hero h1 {
-    font-size: clamp(26px, 5vw, 40px);
-    line-height: 1.4; margin: 0 0 20px;
-    font-weight: 600;
-    color: var(--txt);
-    letter-spacing: 0.02em;
+  .hero-visual {
+    margin: 12px auto 6px;
+    max-width: 720px;
+    border: 6px solid #ff0101;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.16);
+    overflow: hidden;
   }
-  .hero p { color: var(--muted); margin: 0 0 24px; font-size: 16px; }
-  .hero-lede { font-size: 17px; max-width: 820px; line-height: 1.7; color: var(--muted); }
+  .hero-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5.4vw, 44px);
+    line-height: 1.2; margin: 0 0 16px;
+    font-weight: 900;
+    color: #0055c4;
+    letter-spacing: 0.03em;
+    text-shadow: 3px 3px 0 #fff, 5px 5px 0 #ff0101;
+  }
+  .hero p { color: #1f1f1f; margin: 0 0 20px; font-size: 16px; font-weight: 700; }
+  .hero-lede { font-size: 17px; max-width: 820px; line-height: 1.7; color: #1f1f1f; }
   .seo-bullets {
     display: flex; flex-wrap: wrap; gap: 8px;
     margin: 8px 0 16px;
   }
   .seo-bullets span {
-    background: rgba(30, 58, 138, 0.08);
-    border: 1px solid rgba(30, 58, 138, 0.2);
+    background: #ff0101;
+    border: 2px solid #ffed00;
     padding: 8px 14px;
-    border-radius: 4px;
-    font-weight: 500;
-    color: var(--accent);
+    border-radius: 8px;
+    font-weight: 800;
+    color: #fffef6;
     font-size: 13px;
     transition: var(--transition);
+    text-shadow: 1px 1px 0 #c40000;
   }
   .seo-bullets span:hover {
-    background: rgba(30, 58, 138, 0.12);
-    border-color: rgba(30, 58, 138, 0.3);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 10px 16px rgba(0,0,0,0.18);
+  }
+  .privacy-cta-row {
+    margin: 6px 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cta-privacy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #0055c4;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    box-shadow: 0 10px 14px rgba(0,0,0,0.18);
+    border: 3px solid #ffed00;
+    text-shadow: 1px 1px 0 #003b8a;
+    transition: var(--transition);
+  }
+  .cta-privacy:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 14px 18px rgba(0,0,0,0.22);
   }
   @media (max-width: 560px) {
     .hero h1 { font-size: clamp(22px, 6vw, 30px); }
@@ -505,10 +555,13 @@
 /* 背景画像（ぼかさないフルスクリーン） */
 .site-bg {
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll; /* モバイルで消えないよう常にscrollに */
+  background-attachment: scroll;
+  background-image:
+    radial-gradient(220px 220px at 18% 12%, rgba(255, 0, 0, 0.14), transparent 60%),
+    radial-gradient(240px 240px at 82% 8%, rgba(0, 121, 255, 0.16), transparent 65%),
+    radial-gradient(260px 260px at 70% 42%, rgba(255, 153, 0, 0.14), transparent 60%),
+    radial-gradient(180px 180px at 24% 70%, rgba(0, 200, 160, 0.14), transparent 60%),
+    linear-gradient(135deg, #fff6a0 0%, #ffed00 40%, #fff9c4 100%);
 }
 @media (max-width: 768px) {
   /* iOS Safari などで fixed が効かず画像が消えるためモバイルは scroll に */
@@ -523,5 +576,5 @@
 /* コンテンツ側の薄いオーバーレイ（文字を見やすくする） */
 .site-bg-overlay {
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.92); /* より明るく、落ち着いた白 */
+  background-color: rgba(255, 255, 255, 0.95); /* 白ベースで文字を読みやすく */
 }

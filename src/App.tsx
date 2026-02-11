@@ -5,8 +5,6 @@ import Link from "next/link";
 import { loadAllFromManifest, type Listing } from "./lib/normalize";
 import Header from "./components/Header";
 import FloatingLine from "./components/FloatingLine";
-import heroCar from "./assets/hero-car.jpg";
-import topCar from "./assets/top-car.jpg";
 
 
 type Filters = {
@@ -155,7 +153,7 @@ export default function App() {
   return (
     <div
       className="site-bg"
-      style={{ backgroundImage: `url(${heroCar.src})` }}
+      style={{ backgroundColor: "#ffed00" }}
     >
     <div className="site-bg-overlay">
       {/* 上部ナビ（会社概要・プライバシー + 件数バッジ） */}
@@ -185,6 +183,9 @@ export default function App() {
           「中古車購入を安く、でも状態には妥協したくない」方のための業者オークション検索。
           出品票ベースの相場データから、欲しい車種を透明な価格で探せます。
         </p>
+        <div className="privacy-cta-row">
+          <Link href="/privacy" className="cta-privacy">プライバシーポリシーを見る</Link>
+        </div>
         <div className="seo-bullets">
           <span>中古車購入を安くする代行手数料 35,800円〜</span>
           <span>全国の業者オークション相場を横断チェック</span>
@@ -201,15 +202,16 @@ export default function App() {
           </p>
         </div>
 
-        {/* モバイルのみで表示するヒーロー画像 */}
-        <img
-          src={topCar.src}
-          alt="オークション会場に並ぶ車両"
-          className="mobile-hero-image"
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-        />
+        {/* ヒーロー画像（全幅・見切れ防止） */}
+        <div className="hero-visual">
+          <img
+            src="/advertise.jpg"
+            alt="オークション会場に並ぶ車両"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </div>
 
         {/* ▼ 公式LINEボタン（固定配置） */}
         <a

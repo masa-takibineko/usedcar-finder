@@ -1,6 +1,6 @@
 export default function Privacy() {
   return (
-    <main style={{ maxWidth: "800px", margin: "60px auto", color: "#1a1a1a", lineHeight: 1.6 }}>
+    <main style={{ maxWidth: "800px", margin: "40px auto", padding: "24px 16px", color: "#1a1a1a", lineHeight: 1.6, background: "#fff", borderRadius: "12px", boxShadow: "0 6px 12px rgba(0,0,0,0.08)", border: "1px solid #e5e5e5" }}>
       <h1 style={{ color: "#1a1a1a" }}>プライバシーポリシー</h1>
       <p style={{ color: "#4a5568" }}>
         丸印モーター（以下「当社」といいます）は、個人情報の保護を重要な責務と認識し、

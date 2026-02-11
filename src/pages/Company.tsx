@@ -1,6 +1,6 @@
 export default function Company() {
   return (
-    <main style={{ maxWidth: "800px", margin: "60px auto", color: "#1a1a1a", lineHeight: 1.6 }}>
+    <main style={{ maxWidth: "800px", margin: "40px auto", padding: "24px 16px", color: "#1a1a1a", lineHeight: 1.6, background: "#fff", borderRadius: "12px", boxShadow: "0 6px 12px rgba(0,0,0,0.08)", border: "1px solid #e5e5e5" }}>
       <h1 style={{ color: "#1a1a1a" }}>会社概要</h1>
       <p style={{ color: "#4a5568" }}>
         丸印モーターは、中古車を少しでも適正価格で購入したい方をサポートするために運営しています。業者オークションの相場情報と出品票を活用し、条件に合った車両を透明な価格で提案します。
