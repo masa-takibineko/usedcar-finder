@@ -187,7 +187,7 @@ export default function App() {
         <div className="best-fee-banner">
           <strong>代行手数料 業界最安値級 35,800円（税抜）〜</strong>
         </div>
-        <h1>中古車購入を安く抑える「オークション直販」検索</h1>
+        <h1>丸印モーターの中古車オークション代行で相場価格のまま購入</h1>
         <p className="hero-lede">
           「中古車購入を安く、でも状態には妥協したくない」方のための業者オークション検索。
           出品票ベースの相場データから、欲しい車種を透明な価格で探せます。
@@ -200,6 +200,9 @@ export default function App() {
           <span>全国の業者オークション相場を横断チェック</span>
           <span>LINEで無料相談・非公開在庫も提案</span>
         </div>
+        <p style={{ marginTop: 12, color: "#0f172a" }}>
+          丸印モーターは<span style={{ fontWeight: 700 }}>中古車オークション代行</span>を専門に、相場確認から落札まで一括でサポートします。
+        </p>
         <div className="notice" style={{
           background: "rgba(251, 191, 36, 0.08)",
           border: "1px solid rgba(251, 191, 36, 0.25)",
