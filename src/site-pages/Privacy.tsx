@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export default function Privacy() {
   return (
     <main style={{ maxWidth: "800px", margin: "30px auto", padding: "20px 14px", color: "#1a1a1a", lineHeight: 1.5, background: "#fff", borderRadius: "12px", boxShadow: "0 6px 12px rgba(0,0,0,0.08)", border: "1px solid #e5e5e5", fontSize: "12px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-        <img src="/logo.jpg" alt="丸印モーター ロゴ" style={{ height: 32, width: "auto" }} />
+        <Image src="/logo.jpg" alt="丸印モーター ロゴ" width={120} height={32} style={{ height: 32, width: "auto" }} />
         <strong style={{ fontSize: "15px", letterSpacing: "0.05em" }}>丸印モーター</strong>
         <span style={{ fontSize: "13px", color: "#4a5568" }}>｜ プライバシーポリシー</span>
       </div>

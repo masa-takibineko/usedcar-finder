@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 import JsonLd from "../components/JsonLd";
-import Risks from "../../src/pages/Risks";
-import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
+import Risks from "../../src/site-pages/Risks";
+import { breadcrumbJsonLd, buildPageMetadata, webPageJsonLd } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "デメリットと注意点 | 丸印モーター",
-  description: "中古車オークション代行を利用する前に知っておきたいデメリット・注意点をまとめます。",
-  alternates: { canonical: "/risks" },
-};
+const title = "デメリットと注意点 | 丸印モーター";
+const description = "中古車オークション代行を利用する前に知っておきたいデメリット・注意点をまとめます。";
+
+export const metadata: Metadata = buildPageMetadata({
+  title,
+  description,
+  path: "/risks",
+});
 
 export default function Page() {
-  const webPage = webPageJsonLd("/risks", metadata.title as string, metadata.description as string);
-  const breadcrumb = breadcrumbJsonLd("/risks", metadata.title as string);
+  const webPage = webPageJsonLd("/risks", title, description);
+  const breadcrumb = breadcrumbJsonLd("/risks", title);
 
   return (
     <>

@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 
 const priceRows = [
@@ -36,7 +36,14 @@ export default function Price() {
 
         <div className="hero-image-wrap">
           <div className="burst">半額</div>
-          <img src="/img9083.jpg" alt="オークション直販イメージ" />
+          <Image
+            src="/img9083.jpg"
+            alt="オークション直販イメージ"
+            width={1200}
+            height={800}
+            sizes="(max-width: 840px) 100vw, 40vw"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
       </section>
 

@@ -1,15 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+import Image from "next/image";
 import Link from "next/link";
-
-const faqs: Array<{ q: string; a: string }> = [
-  { q: "本当に中古車は安くなりますか？", a: "車両によって差はありますが、流通コストが少ないため、一般的な中古車販売より安くなるケースが多いです。" },
-  { q: "初心者でも利用できますか？", a: "はい。出品票の見方や相場感など、初めての方にも分かるように説明します。" },
-  { q: "実車を見られないのは不安です。", a: "オークション出品票には評価や状態が詳細に記載されています。内容を確認したうえで判断できます。" },
-  { q: "手数料以外に費用はかかりますか？", a: "陸送などの実費がかかる場合がありますが、事前に説明します。" },
-  { q: "落札後にキャンセルできますか？", a: "オークションなので原則キャンセルは不可となっています。" },
-  { q: "納車までどれくらいかかりますか？", a: "車両や手続き状況によりますが、納車は最短翌日〜7日以内です。" },
-];
+import { faqs } from "./faqData";
 
 export default function FAQ() {
   return (
@@ -27,7 +19,14 @@ export default function FAQ() {
           </div>
         </div>
         <div className="poster-img">
-          <img src="/img9082.jpg" alt="オークション車両イメージ" onError={(e) => { e.currentTarget.src = "/img9082.jpg?fallback"; }} />
+          <Image
+            src="/img9082.jpg"
+            alt="オークション車両イメージ"
+            width={1200}
+            height={800}
+            sizes="(max-width: 820px) 100vw, 40vw"
+            style={{ width: "100%", height: "auto" }}
+          />
           <div className="burst">FAQ</div>
         </div>
       </section>

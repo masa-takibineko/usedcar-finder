@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 import JsonLd from "../components/JsonLd";
-import Example from "../../src/pages/Example";
-import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
+import Example from "../../src/site-pages/Example";
+import { breadcrumbJsonLd, buildPageMetadata, webPageJsonLd } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "料金の参考例 | 丸印モーター",
-  description: "中古車オークション代行で実際にかかる料金のイメージ（参考例）を紹介します。",
-  alternates: { canonical: "/example" },
-};
+const title = "料金の参考例 | 丸印モーター";
+const description = "中古車オークション代行で実際にかかる料金のイメージ（参考例）を紹介します。";
+
+export const metadata: Metadata = buildPageMetadata({
+  title,
+  description,
+  path: "/example",
+});
 
 export default function Page() {
-  const webPage = webPageJsonLd("/example", metadata.title as string, metadata.description as string);
-  const breadcrumb = breadcrumbJsonLd("/example", metadata.title as string);
+  const webPage = webPageJsonLd("/example", title, description);
+  const breadcrumb = breadcrumbJsonLd("/example", title);
 
   return (
     <>

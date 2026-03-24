@@ -1,11 +1,14 @@
+import Image from "next/image";
+
 export default function Company() {
   return (
     <main style={{ maxWidth: "800px", margin: "30px auto", padding: "20px 14px", color: "#1a1a1a", lineHeight: 1.5, background: "#fff", borderRadius: "12px", boxShadow: "0 6px 12px rgba(0,0,0,0.08)", border: "1px solid #e5e5e5", fontSize: "12px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-        <img src="/logo.jpg" alt="丸印モーター ロゴ" style={{ height: 32, width: "auto" }} />
+        <Image src="/logo.jpg" alt="丸印モーター ロゴ" width={120} height={32} style={{ height: 32, width: "auto" }} />
         <strong style={{ fontSize: "15px", letterSpacing: "0.05em" }}>丸印モーター</strong>
         <span style={{ fontSize: "13px", color: "#4a5568" }}>｜ 会社概要</span>
       </div>
+      <h1 style={{ color: "#1a1a1a", fontSize: "18px", margin: "4px 0 8px" }}>会社概要</h1>
       <p style={{ color: "#4a5568", margin: "0 0 10px" }}>
         丸印モーターは、中古車を少しでも適正価格で購入したい方をサポートするために運営しています。業者オークションの相場情報と出品票を活用し、条件に合った車両を透明な価格で提案します。
       </p>

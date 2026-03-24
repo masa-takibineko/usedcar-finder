@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
 import JsonLd from "./components/JsonLd";
 import App from "../src/App";
-import { breadcrumbJsonLd, webPageJsonLd } from "./lib/seo";
+import { breadcrumbJsonLd, buildPageMetadata, webPageJsonLd } from "./lib/seo";
 
-export const metadata: Metadata = {
-  title: "中古車購入を安くするならオークション代行検索丸印モーターへ",
-  description:
-    "中古車購入を安く抑えたい方のためのオークション代行検索。業界最安級の代行手数料35,800円〜で、中古車を適正価格で手に入れるための相場データと出品票を提供します。",
+const title = "丸印モーターの中古車オークション代行 | 中古車を相場で安く購入";
+const description =
+  "丸印モーターの中古車オークション代行。業界最安級の代行手数料35,800円〜で、業者オークションの相場データと出品票を見ながら中古車を適正価格で購入できます。";
+
+export const metadata = buildPageMetadata({
+  title,
+  description,
+  path: "/",
   keywords: [
     "中古車購入",
     "中古車 安く",
@@ -20,13 +23,10 @@ export const metadata: Metadata = {
     "丸印モーター",
     "オークション直販"
   ],
-  alternates: {
-    canonical: "/",
-  },
-};
+});
 
 export default function Page() {
-  const webPage = webPageJsonLd("/", "中古車購入を安くするならオークション代行検索丸印モーターへ", metadata.description || "");
+  const webPage = webPageJsonLd("/", title, description);
   const breadcrumb = breadcrumbJsonLd("/", "ホーム");
 
   return (

@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Risks() {
@@ -18,7 +18,14 @@ export default function Risks() {
           </div>
         </div>
         <div className="poster-img">
-          <img src="/img9081.jpg" alt="オークション車両イメージ" onError={(e) => { e.currentTarget.src = "/img9081.jpg?fallback"; }} />
+          <Image
+            src="/img9081.jpg"
+            alt="オークション車両イメージ"
+            width={1200}
+            height={800}
+            sizes="(max-width: 820px) 100vw, 40vw"
+            style={{ width: "100%", height: "auto" }}
+          />
           <div className="burst">注意</div>
         </div>
       </section>

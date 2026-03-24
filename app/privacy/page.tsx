@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 import JsonLd from "../components/JsonLd";
-import Privacy from "../../src/pages/Privacy";
-import { breadcrumbJsonLd, webPageJsonLd } from "../lib/seo";
+import Privacy from "../../src/site-pages/Privacy";
+import { breadcrumbJsonLd, buildPageMetadata, webPageJsonLd } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "プライバシーポリシー | 丸印モーター",
-  description: "丸印モーターのプライバシーポリシー。個人情報の利用目的、第三者提供、安全管理、お問い合わせ窓口について記載します。",
-  alternates: { canonical: "/privacy" },
-};
+const title = "プライバシーポリシー | 丸印モーター";
+const description = "丸印モーターのプライバシーポリシー。個人情報の利用目的、第三者提供、安全管理、お問い合わせ窓口について記載します。";
+
+export const metadata: Metadata = buildPageMetadata({
+  title,
+  description,
+  path: "/privacy",
+});
 
 export default function Page() {
-  const webPage = webPageJsonLd("/privacy", metadata.title as string, metadata.description as string);
-  const breadcrumb = breadcrumbJsonLd("/privacy", metadata.title as string);
+  const webPage = webPageJsonLd("/privacy", title, description);
+  const breadcrumb = breadcrumbJsonLd("/privacy", title);
 
   return (
     <>
